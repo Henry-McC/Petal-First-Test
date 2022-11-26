@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D68054D629202974008A36AC /* Petal_First_TestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68054D529202974008A36AC /* Petal_First_TestApp.swift */; };
+		D68054D829202974008A36AC /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68054D729202974008A36AC /* GameView.swift */; };
+		D68054DA29202976008A36AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D68054D929202976008A36AC /* Assets.xcassets */; };
+		D68054DD29202976008A36AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D68054DC29202976008A36AC /* Preview Assets.xcassets */; };
+		D68054E429202AEC008A36AC /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68054E329202AEC008A36AC /* Launch Screen.storyboard */; };
+		D68054E729202F54008A36AC /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68054E629202F54008A36AC /* Color+Extensions.swift */; };
+		D68054EB2920305D008A36AC /* Guess.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68054EA2920305D008A36AC /* Guess.swift */; };
+		D68054EE29203157008A36AC /* GuessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68054ED29203157008A36AC /* GuessView.swift */; };
+		D68054F1292079CB008A36AC /* WordleDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68054F0292079CB008A36AC /* WordleDataModel.swift */; };
+		D68054F329207D14008A36AC /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68054F229207D14008A36AC /* Global.swift */; };
+		D68054F5292084CA008A36AC /* LetterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68054F4292084CA008A36AC /* LetterButtonView.swift */; };
+		D68054F7292086D3008A36AC /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68054F6292086D3008A36AC /* Keyboard.swift */; };
+		D68054FA2920CFFA008A36AC /* Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68054F92920CFFA008A36AC /* Shake.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D68054D229202974008A36AC /* Petal First Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Petal First Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D68054D529202974008A36AC /* Petal_First_TestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petal_First_TestApp.swift; sourceTree = "<group>"; };
+		D68054D729202974008A36AC /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		D68054D929202976008A36AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D68054DC29202976008A36AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D68054E329202AEC008A36AC /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		D68054E629202F54008A36AC /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		D68054EA2920305D008A36AC /* Guess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guess.swift; sourceTree = "<group>"; };
+		D68054ED29203157008A36AC /* GuessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessView.swift; sourceTree = "<group>"; };
+		D68054F0292079CB008A36AC /* WordleDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleDataModel.swift; sourceTree = "<group>"; };
+		D68054F229207D14008A36AC /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		D68054F4292084CA008A36AC /* LetterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterButtonView.swift; sourceTree = "<group>"; };
+		D68054F6292086D3008A36AC /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
+		D68054F92920CFFA008A36AC /* Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shake.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D68054CF29202974008A36AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D68054C929202974008A36AC = {
+			isa = PBXGroup;
+			children = (
+				D68054D429202974008A36AC /* Petal First Test */,
+				D68054D329202974008A36AC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D68054D329202974008A36AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D68054D229202974008A36AC /* Petal First Test.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D68054D429202974008A36AC /* Petal First Test */ = {
+			isa = PBXGroup;
+			children = (
+				D68054D529202974008A36AC /* Petal_First_TestApp.swift */,
+				D68054EF29207999008A36AC /* ViewModels */,
+				D68054E929203050008A36AC /* Models */,
+				D68054EC29203147008A36AC /* Views */,
+				D68054E529202F3D008A36AC /* Extensions */,
+				D68054F82920CFEB008A36AC /* Animations */,
+				D68054D929202976008A36AC /* Assets.xcassets */,
+				D68054E329202AEC008A36AC /* Launch Screen.storyboard */,
+				D68054DB29202976008A36AC /* Preview Content */,
+			);
+			path = "Petal First Test";
+			sourceTree = "<group>";
+		};
+		D68054DB29202976008A36AC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D68054DC29202976008A36AC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D68054E529202F3D008A36AC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D68054E629202F54008A36AC /* Color+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D68054E929203050008A36AC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D68054EA2920305D008A36AC /* Guess.swift */,
+				D68054F229207D14008A36AC /* Global.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D68054EC29203147008A36AC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D68054D729202974008A36AC /* GameView.swift */,
+				D68054ED29203157008A36AC /* GuessView.swift */,
+				D68054F4292084CA008A36AC /* LetterButtonView.swift */,
+				D68054F6292086D3008A36AC /* Keyboard.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D68054EF29207999008A36AC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D68054F0292079CB008A36AC /* WordleDataModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D68054F82920CFEB008A36AC /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				D68054F92920CFFA008A36AC /* Shake.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D68054D129202974008A36AC /* Petal First Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D68054E029202976008A36AC /* Build configuration list for PBXNativeTarget "Petal First Test" */;
+			buildPhases = (
+				D68054CE29202974008A36AC /* Sources */,
+				D68054CF29202974008A36AC /* Frameworks */,
+				D68054D029202974008A36AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Petal First Test";
+			productName = "Petal First Test";
+			productReference = D68054D229202974008A36AC /* Petal First Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D68054CA29202974008A36AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					D68054D129202974008A36AC = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = D68054CD29202974008A36AC /* Build configuration list for PBXProject "Petal First Test" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D68054C929202974008A36AC;
+			productRefGroup = D68054D329202974008A36AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D68054D129202974008A36AC /* Petal First Test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D68054D029202974008A36AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D68054E429202AEC008A36AC /* Launch Screen.storyboard in Resources */,
+				D68054DD29202976008A36AC /* Preview Assets.xcassets in Resources */,
+				D68054DA29202976008A36AC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D68054CE29202974008A36AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D68054F5292084CA008A36AC /* LetterButtonView.swift in Sources */,
+				D68054D829202974008A36AC /* GameView.swift in Sources */,
+				D68054EE29203157008A36AC /* GuessView.swift in Sources */,
+				D68054EB2920305D008A36AC /* Guess.swift in Sources */,
+				D68054F7292086D3008A36AC /* Keyboard.swift in Sources */,
+				D68054D629202974008A36AC /* Petal_First_TestApp.swift in Sources */,
+				D68054FA2920CFFA008A36AC /* Shake.swift in Sources */,
+				D68054F1292079CB008A36AC /* WordleDataModel.swift in Sources */,
+				D68054E729202F54008A36AC /* Color+Extensions.swift in Sources */,
+				D68054F329207D14008A36AC /* Global.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D68054DE29202976008A36AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D68054DF29202976008A36AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D68054E129202976008A36AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Petal First Test/Preview Content\"";
+				DEVELOPMENT_TEAM = 5T2Q9777A6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Ardenn.Petal-First-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D68054E229202976008A36AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Petal First Test/Preview Content\"";
+				DEVELOPMENT_TEAM = 5T2Q9777A6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Ardenn.Petal-First-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D68054CD29202974008A36AC /* Build configuration list for PBXProject "Petal First Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D68054DE29202976008A36AC /* Debug */,
+				D68054DF29202976008A36AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D68054E029202976008A36AC /* Build configuration list for PBXNativeTarget "Petal First Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D68054E129202976008A36AC /* Debug */,
+				D68054E229202976008A36AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D68054CA29202974008A36AC /* Project object */;
+}
