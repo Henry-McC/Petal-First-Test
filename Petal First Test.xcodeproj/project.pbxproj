@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D6057F71295E1B23001563E9 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6057F70295E1B23001563E9 /* RoundView.swift */; };
 		D68054D629202974008A36AC /* Petal_First_TestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68054D529202974008A36AC /* Petal_First_TestApp.swift */; };
 		D68054D829202974008A36AC /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68054D729202974008A36AC /* GameView.swift */; };
 		D68054DA29202976008A36AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D68054D929202976008A36AC /* Assets.xcassets */; };
@@ -20,9 +21,11 @@
 		D68054F5292084CA008A36AC /* LetterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68054F4292084CA008A36AC /* LetterButtonView.swift */; };
 		D68054F7292086D3008A36AC /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68054F6292086D3008A36AC /* Keyboard.swift */; };
 		D68054FA2920CFFA008A36AC /* Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68054F92920CFFA008A36AC /* Shake.swift */; };
+		D6E2A174293D71E20001285E /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E2A173293D71E20001285E /* ToastView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D6057F70295E1B23001563E9 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
 		D68054D229202974008A36AC /* Petal First Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Petal First Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D68054D529202974008A36AC /* Petal_First_TestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petal_First_TestApp.swift; sourceTree = "<group>"; };
 		D68054D729202974008A36AC /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
@@ -37,6 +40,7 @@
 		D68054F4292084CA008A36AC /* LetterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterButtonView.swift; sourceTree = "<group>"; };
 		D68054F6292086D3008A36AC /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		D68054F92920CFFA008A36AC /* Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shake.swift; sourceTree = "<group>"; };
+		D6E2A173293D71E20001285E /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,8 @@
 				D68054ED29203157008A36AC /* GuessView.swift */,
 				D68054F4292084CA008A36AC /* LetterButtonView.swift */,
 				D68054F6292086D3008A36AC /* Keyboard.swift */,
+				D6E2A173293D71E20001285E /* ToastView.swift */,
+				D6057F70295E1B23001563E9 /* RoundView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -206,11 +212,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D68054F5292084CA008A36AC /* LetterButtonView.swift in Sources */,
+				D6057F71295E1B23001563E9 /* RoundView.swift in Sources */,
 				D68054D829202974008A36AC /* GameView.swift in Sources */,
 				D68054EE29203157008A36AC /* GuessView.swift in Sources */,
 				D68054EB2920305D008A36AC /* Guess.swift in Sources */,
 				D68054F7292086D3008A36AC /* Keyboard.swift in Sources */,
 				D68054D629202974008A36AC /* Petal_First_TestApp.swift in Sources */,
+				D6E2A174293D71E20001285E /* ToastView.swift in Sources */,
 				D68054FA2920CFFA008A36AC /* Shake.swift in Sources */,
 				D68054F1292079CB008A36AC /* WordleDataModel.swift in Sources */,
 				D68054E729202F54008A36AC /* Color+Extensions.swift in Sources */,

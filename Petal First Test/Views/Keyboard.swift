@@ -38,8 +38,8 @@ struct Keyboard: View {
                 .frame(width: 60, height: 50)
                 .foregroundColor(.primary)
                 .background(Color.unused)
-                .disabled(dm.currentWord.count < 5 || !dm.inPlay)
-                .opacity((dm.currentWord.count < 5 || !dm.inPlay) ? 0.6 : 1)
+                .disabled(dm.currentWord.count < 4 || !dm.inPlay)
+                .opacity((dm.currentWord.count < 4 || !dm.inPlay) ? 0.6 : 1)
                 ForEach(thirdRowArray, id: \.self) { letter in
                     LetterButtonView(letter: letter)
                 }
@@ -56,6 +56,19 @@ struct Keyboard: View {
                     }
                 .disabled(!dm.inPlay || dm.currentWord.count == 0)
                 .opacity((!dm.inPlay || dm.currentWord.count == 0) ? 0.6 : 1)
+                }
+            HStack(spacing: 2) {
+                Button {
+                    dm.nextRound()
+                } label: {
+                    Text("Next Round")
+                }
+                .font(.system(size: 20))
+                .frame(width: 150, height: 50)
+                .foregroundColor(.primary)
+                .background(Color.unused)
+                .disabled(!dm.roundOver)
+                .opacity((!dm.roundOver) ? 0.6 : 1)
                 }
             }
         }

@@ -12,7 +12,20 @@ struct GameView: View {
     var body: some View {
         NavigationView {
             VStack {
+                //Text("Round: \(dm.round)/5")
+                RoundView()
                 Spacer()
+                Text(dm.testWord)
+                    .font(.largeTitle)
+                Button {
+                    dm.startGame()
+                } label: {
+                    Text("New Game")
+                }
+                .padding(10)
+                .foregroundColor(.white)
+                .background(.blue)
+                .cornerRadius(5)
                 VStack(spacing: 3) {
                     GuessView(guess: $dm.guesses[0])
                         .modifier(Shake(animatableData: CGFloat(dm.incorrectAttempts[0])))
@@ -26,6 +39,12 @@ struct GameView: View {
             }
             .padding()
             .navigationBarTitleDisplayMode(.inline)
+            .overlay(alignment: .top) {
+                if let toastText = dm.toastText {
+                    ToastView(toastText: toastText)
+                        .offset(y: 20)
+                }
+            }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {

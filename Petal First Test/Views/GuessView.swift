@@ -11,7 +11,7 @@ struct GuessView: View {
     @Binding var guess: Guess
     var body: some View {
         HStack(spacing: 3) {
-            ForEach(0...4, id: \.self) { index in
+            ForEach(0...5, id: \.self) { index in
                 Text(guess.guessLetters[index])
                     .foregroundColor(.primary)
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 50, alignment: .center)

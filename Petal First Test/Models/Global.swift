@@ -41,5 +41,7 @@ enum Global {
         }
     }
     
-    static let commonWords = ["thinks", "rowing"]
+    static let commonWords = ["THINKS", "ROWING", "FLIGHT", "WRITER", "BITTER"]
+    static let commonWords2 = ["PROPOSE", "ATHLETE"]
+    static let commonWords3 = ["STANDARD", "DOCUMENT"]
 }
