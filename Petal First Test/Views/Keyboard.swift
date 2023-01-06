@@ -67,8 +67,8 @@ struct Keyboard: View {
                 .frame(width: 150, height: 50)
                 .foregroundColor(.primary)
                 .background(Color.unused)
-                .disabled(!dm.roundOver)
-                .opacity((!dm.roundOver) ? 0.6 : 1)
+                .disabled(!dm.roundOver || dm.gameOver)
+                .opacity((!dm.roundOver || dm.gameOver) ? 0.6 : 1)
                 }
             }
         }

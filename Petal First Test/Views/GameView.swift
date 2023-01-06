@@ -26,6 +26,8 @@ struct GameView: View {
                 .foregroundColor(.white)
                 .background(.blue)
                 .cornerRadius(5)
+                .opacity(dm.shouldHide ? 0 : 1)
+             //  .frame(height: dm.shouldHide ? nil : 0)
                 VStack(spacing: 3) {
                     GuessView(guess: $dm.guesses[0])
                         .modifier(Shake(animatableData: CGFloat(dm.incorrectAttempts[0])))

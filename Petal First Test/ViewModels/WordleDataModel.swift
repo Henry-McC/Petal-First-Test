@@ -11,7 +11,10 @@ class WordleDataModel: ObservableObject {
     @Published var guesses: [Guess] = []
     @Published var incorrectAttempts = [Int](repeating: 0, count: 6)
     @Published var toastText: String?
-    //@Published var round = 1
+    @Published var boardLength: Int = 5
+    @Published var shouldHide = false
+    @Published var userScore = 0
+    @Published var highScore = 0
     
     var keyColors = [String: Color]()
     var selectedWord = ""
@@ -19,13 +22,13 @@ class WordleDataModel: ObservableObject {
     var tryIndex = 0
     var inPlay = false
     var gameOver = false
-    var toastWords = ["Awesome!"]
+    var toastWords = ["Awesome!", "Sweet!", "Nice!"]
     var shuffledWord: Array<Character> = []
     var testWord = ""
     var round = 1
     var roundOver = false
-    
-
+   // var gNumber: Int = 6
+   // var gArray = [0, 1, 2, 3, 4, 5]
 
     
     var gameStarted: Bool {
@@ -36,25 +39,43 @@ class WordleDataModel: ObservableObject {
         return("Round: \(round)/5")
     }
     
+    
     var disabledKeys: Bool {
-        !inPlay || currentWord.count == 6
+        if round < 3 {
+           return !inPlay || currentWord.count == 6
+        } else if round == 3 || round == 4 {
+           return !inPlay || currentWord.count == 7
+        } else if round == 5 {
+           return !inPlay || currentWord.count == 8
+        }
+        return !inPlay
     }
     
     init() {
        // newGame()
        // shuffle()
         populateDefaults()
+        inPlay = false
     }
     
     func startGame() {
+        round = 1
+        userScore = 0
         newGame()
         shuffle()
+        shouldHide = true
     }
     
     // Set Up
     func newGame() {
         populateDefaults()
-        selectedWord = Global.commonWords.randomElement()!
+        if round < 3 {
+            selectedWord = Global.commonWords.randomElement()!
+        } else if round == 3 || round == 4 {
+            selectedWord = Global.commonWords2.randomElement()!
+        } else if round == 5 {
+            selectedWord = Global.commonWords3.randomElement()!
+        }
         currentWord = ""
         shuffledWord = selectedWord.shuffled()
         inPlay = true
@@ -69,15 +90,38 @@ class WordleDataModel: ObservableObject {
     }
     
     func nextRound() {
-        round += 1
-        roundOver = false
-        newGame()
-        shuffle()
-       // roundText()
-        print(round)
+        if round == 5 {
+            gameOver = true
+            if highScore < userScore {
+                highScore = userScore
+            }
+            print("game over")
+            showToast(with: "Game Over!")
+            shouldHide = false
+        } else {
+            round += 1
+            roundOver = false
+            maxGuess()
+            newGame()
+            shuffle()
+           // roundText()
+            print(round)
+        }
     }
     
 
+    
+    func maxGuess() {
+        if round < 3 {
+            return boardLength = 5
+        } else if round == 3 || round == 4 {
+            return boardLength = 6
+        } else if round == 5 {
+            return boardLength = 7
+        } else {
+            return boardLength = 5
+        }
+    }
     
     
     func populateDefaults() {
@@ -102,17 +146,15 @@ class WordleDataModel: ObservableObject {
     
     func enterWord() {
         if verifyWord() && verifyLetters() {
-            if round == 5 {
-                print("game over")
-            }
             print("Valid word")
             print(verifyLetters())
            // gameOver = true
             print("You Win")
-            showToast(with: toastWords[0])
             roundOver = true
+            userScore = (userScore + currentWord.count * 100)
             print("wtf")
             inPlay = false
+            showToast(with: toastWords.randomElement())
         }  else {
                 withAnimation {
                     self.incorrectAttempts[tryIndex] += 1
@@ -129,7 +171,7 @@ class WordleDataModel: ObservableObject {
     }
     
     func updateRow() {
-        let guessWord = currentWord.padding(toLength: 6, withPad: " ", startingAt: 0)
+        let guessWord = currentWord.padding(toLength: 8, withPad: " ", startingAt: 0)
         guesses[tryIndex].word = guessWord
     }
     
@@ -158,7 +200,7 @@ class WordleDataModel: ObservableObject {
         withAnimation {
             toastText = text
         }
-        withAnimation(Animation.linear(duration: 0.2).delay(3)) {
+        withAnimation(Animation.linear(duration: 0.2).delay(1)) {
             toastText = nil
         }
     }

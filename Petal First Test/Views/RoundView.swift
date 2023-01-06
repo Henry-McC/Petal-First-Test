@@ -12,6 +12,7 @@ struct RoundView: View {
 
     var body: some View {
         Text(dm.roundText())
+        Text("Score: \(dm.userScore) High Score: \(dm.highScore)")
     }
 }
 

@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct Guess {
-    let index: Int
+    var index: Int
     var word = "        " // 8 Spaces
     var bgColors = [Color](repeating: .wrong, count: 6)
     var cardsFlipped = [Bool](repeating: false, count: 6)
     var guessLetters: [String] {
         word.map { String($0) }
     }
-    var length = 5
+    var length = 7
 }
