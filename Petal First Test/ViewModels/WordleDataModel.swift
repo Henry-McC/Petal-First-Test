@@ -7,7 +7,12 @@
 
 import SwiftUI
 
+
+
 class WordleDataModel: ObservableObject {
+    let defaults = UserDefaults.standard
+    
+    
     @Published var guesses: [Guess] = []
     @Published var incorrectAttempts = [Int](repeating: 0, count: 6)
     @Published var toastText: String?
@@ -15,6 +20,50 @@ class WordleDataModel: ObservableObject {
     @Published var shouldHide = false
     @Published var userScore = 0
     @Published var highScore = 0
+    
+  //  @State var countDownTimer: Int = 5
+  //  @State var timerRunning = true
+  //  let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
+ /// Timer Data
+   @Published var countDownTimer: Int = 10
+   @Published var timerRunning = false
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+
+    
+    func startTimer() {
+        timerRunning = true
+        multiplierRunning = true
+    }
+    
+    func endTimer() {
+        timerRunning = false
+        multiplierRunning = false
+    }
+    
+    func addTime() {
+        countDownTimer = countDownTimer + 10
+    }
+    
+    func outOfTime() {
+        gameOver = true
+        inPlay = false
+        showToast(with: "Out of Time!")
+        shouldHide = false
+    }
+ ///
+    
+/// Multiplier Countdown
+    
+    @Published var multiplier: Double = 2.000
+    @Published var multiplierRunning = false
+    let multiplierTimer = Timer.publish(every: 0.052, on: .main, in: .common).autoconnect()
+
+    
+    @objc func startMultiplier() {
+        
+    }
+///
     
     var keyColors = [String: Color]()
     var selectedWord = ""
@@ -24,7 +73,7 @@ class WordleDataModel: ObservableObject {
     var gameOver = false
     var toastWords = ["Awesome!", "Sweet!", "Nice!"]
     var shuffledWord: Array<Character> = []
-    var testWord = ""
+    var testWord = " "
     var round = 1
     var roundOver = false
    // var gNumber: Int = 6
@@ -56,11 +105,16 @@ class WordleDataModel: ObservableObject {
        // shuffle()
         populateDefaults()
         inPlay = false
+        highScore = defaults.integer(forKey: "HighScore")
     }
     
     func startGame() {
         round = 1
         userScore = 0
+        countDownTimer = 10
+        multiplier = 2.000
+        maxGuess()
+        startTimer()
         newGame()
         shuffle()
         shouldHide = true
@@ -92,8 +146,10 @@ class WordleDataModel: ObservableObject {
     func nextRound() {
         if round == 5 {
             gameOver = true
+            userScore = Int(Double(userScore) * multiplier)
             if highScore < userScore {
                 highScore = userScore
+                defaults.set(userScore, forKey: "HighScore")
             }
             print("game over")
             showToast(with: "Game Over!")
@@ -104,6 +160,8 @@ class WordleDataModel: ObservableObject {
             maxGuess()
             newGame()
             shuffle()
+            addTime()
+            startTimer()
            // roundText()
             print(round)
         }
@@ -146,6 +204,7 @@ class WordleDataModel: ObservableObject {
     
     func enterWord() {
         if verifyWord() && verifyLetters() {
+            endTimer()
             print("Valid word")
             print(verifyLetters())
            // gameOver = true

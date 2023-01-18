@@ -17,7 +17,7 @@ struct GuessView: View {
                 Text(guess.guessLetters[index])
                     .foregroundColor(.primary)
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 50, alignment: .center)
-                    .background(Color.systemBackground)
+                   // .background(Color.systemBackground)
                     .font(.system(size: 35, weight: .heavy))
                     //.border(Color(.secondaryLabel))
                     .overlay(
@@ -35,5 +35,6 @@ struct GuessView: View {
 struct GuessView_Previews: PreviewProvider {
     static var previews: some View {
         GuessView(guess: .constant(Guess(index: 0)))
+            .environmentObject(WordleDataModel())
     }
 }

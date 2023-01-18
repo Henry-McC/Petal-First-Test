@@ -1,0 +1,32 @@
+{
+  "configurations" : [
+    {
+      "id" : "595B848F-BE7F-442C-A731-1A992ED7783F",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    },
+    {
+      "id" : "6D422F1C-FCB7-461C-BC19-8EF2063DDC92",
+      "name" : "Configuration 2",
+      "options" : {
+        "areLocalizationScreenshotsEnabled" : true,
+        "uiTestingScreenshotsLifetime" : "keepAlways"
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Petal First Test.xcodeproj",
+        "identifier" : "D615425F29709EB900875757",
+        "name" : "Petal First TestUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

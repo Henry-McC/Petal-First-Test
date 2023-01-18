@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		D6057F71295E1B23001563E9 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6057F70295E1B23001563E9 /* RoundView.swift */; };
+		D615426329709EBA00875757 /* Petal_First_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D615426229709EBA00875757 /* Petal_First_TestUITests.swift */; };
+		D615426529709EBA00875757 /* Petal_First_TestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D615426429709EBA00875757 /* Petal_First_TestUITestsLaunchTests.swift */; };
+		D65B506F297343A5004CAEA8 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65B506E297343A5004CAEA8 /* BackgroundView.swift */; };
+		D663D497296C80F00075DE01 /* MultiplierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D663D496296C80F00075DE01 /* MultiplierView.swift */; };
 		D68054D629202974008A36AC /* Petal_First_TestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68054D529202974008A36AC /* Petal_First_TestApp.swift */; };
 		D68054D829202974008A36AC /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68054D729202974008A36AC /* GameView.swift */; };
 		D68054DA29202976008A36AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D68054D929202976008A36AC /* Assets.xcassets */; };
@@ -21,11 +25,29 @@
 		D68054F5292084CA008A36AC /* LetterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68054F4292084CA008A36AC /* LetterButtonView.swift */; };
 		D68054F7292086D3008A36AC /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68054F6292086D3008A36AC /* Keyboard.swift */; };
 		D68054FA2920CFFA008A36AC /* Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68054F92920CFFA008A36AC /* Shake.swift */; };
+		D6AD63DD296D2B18000F17D1 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AD63DC296D2B18000F17D1 /* HelpView.swift */; };
+		D6CC9D952969DD27006FA274 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC9D942969DD27006FA274 /* TimerView.swift */; };
 		D6E2A174293D71E20001285E /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E2A173293D71E20001285E /* ToastView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D615426629709EBA00875757 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D68054CA29202974008A36AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D68054D129202974008A36AC;
+			remoteInfo = "Petal First Test";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		D6057F70295E1B23001563E9 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
+		D615425B297099FC00875757 /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
+		D615426029709EB900875757 /* Petal First TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Petal First TestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D615426229709EBA00875757 /* Petal_First_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petal_First_TestUITests.swift; sourceTree = "<group>"; };
+		D615426429709EBA00875757 /* Petal_First_TestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petal_First_TestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D65B506E297343A5004CAEA8 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		D663D496296C80F00075DE01 /* MultiplierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplierView.swift; sourceTree = "<group>"; };
 		D68054D229202974008A36AC /* Petal First Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Petal First Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D68054D529202974008A36AC /* Petal_First_TestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petal_First_TestApp.swift; sourceTree = "<group>"; };
 		D68054D729202974008A36AC /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
@@ -40,10 +62,19 @@
 		D68054F4292084CA008A36AC /* LetterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterButtonView.swift; sourceTree = "<group>"; };
 		D68054F6292086D3008A36AC /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		D68054F92920CFFA008A36AC /* Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shake.swift; sourceTree = "<group>"; };
+		D6AD63DC296D2B18000F17D1 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
+		D6CC9D942969DD27006FA274 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		D6E2A173293D71E20001285E /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D615425D29709EB900875757 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D68054CF29202974008A36AC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -54,10 +85,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D615426129709EBA00875757 /* Petal First TestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D615426229709EBA00875757 /* Petal_First_TestUITests.swift */,
+				D615426429709EBA00875757 /* Petal_First_TestUITestsLaunchTests.swift */,
+			);
+			path = "Petal First TestUITests";
+			sourceTree = "<group>";
+		};
 		D68054C929202974008A36AC = {
 			isa = PBXGroup;
 			children = (
 				D68054D429202974008A36AC /* Petal First Test */,
+				D615426129709EBA00875757 /* Petal First TestUITests */,
 				D68054D329202974008A36AC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				D68054D229202974008A36AC /* Petal First Test.app */,
+				D615426029709EB900875757 /* Petal First TestUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,11 +157,15 @@
 			isa = PBXGroup;
 			children = (
 				D68054D729202974008A36AC /* GameView.swift */,
+				D6AD63DC296D2B18000F17D1 /* HelpView.swift */,
 				D68054ED29203157008A36AC /* GuessView.swift */,
 				D68054F4292084CA008A36AC /* LetterButtonView.swift */,
 				D68054F6292086D3008A36AC /* Keyboard.swift */,
 				D6E2A173293D71E20001285E /* ToastView.swift */,
+				D6CC9D942969DD27006FA274 /* TimerView.swift */,
+				D663D496296C80F00075DE01 /* MultiplierView.swift */,
 				D6057F70295E1B23001563E9 /* RoundView.swift */,
+				D65B506E297343A5004CAEA8 /* BackgroundView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -128,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				D68054F0292079CB008A36AC /* WordleDataModel.swift */,
+				D615425B297099FC00875757 /* TestPlan.xctestplan */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -143,6 +190,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D615425F29709EB900875757 /* Petal First TestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D615426829709EBA00875757 /* Build configuration list for PBXNativeTarget "Petal First TestUITests" */;
+			buildPhases = (
+				D615425C29709EB900875757 /* Sources */,
+				D615425D29709EB900875757 /* Frameworks */,
+				D615425E29709EB900875757 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D615426729709EBA00875757 /* PBXTargetDependency */,
+			);
+			name = "Petal First TestUITests";
+			productName = "Petal First TestUITests";
+			productReference = D615426029709EB900875757 /* Petal First TestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		D68054D129202974008A36AC /* Petal First Test */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D68054E029202976008A36AC /* Build configuration list for PBXNativeTarget "Petal First Test" */;
@@ -167,9 +232,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					D615425F29709EB900875757 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = D68054D129202974008A36AC;
+					};
 					D68054D129202974008A36AC = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -189,11 +258,19 @@
 			projectRoot = "";
 			targets = (
 				D68054D129202974008A36AC /* Petal First Test */,
+				D615425F29709EB900875757 /* Petal First TestUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D615425E29709EB900875757 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D68054D029202974008A36AC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -207,6 +284,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D615425C29709EB900875757 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D615426529709EBA00875757 /* Petal_First_TestUITestsLaunchTests.swift in Sources */,
+				D615426329709EBA00875757 /* Petal_First_TestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D68054CE29202974008A36AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -214,21 +300,71 @@
 				D68054F5292084CA008A36AC /* LetterButtonView.swift in Sources */,
 				D6057F71295E1B23001563E9 /* RoundView.swift in Sources */,
 				D68054D829202974008A36AC /* GameView.swift in Sources */,
+				D663D497296C80F00075DE01 /* MultiplierView.swift in Sources */,
 				D68054EE29203157008A36AC /* GuessView.swift in Sources */,
 				D68054EB2920305D008A36AC /* Guess.swift in Sources */,
+				D6CC9D952969DD27006FA274 /* TimerView.swift in Sources */,
 				D68054F7292086D3008A36AC /* Keyboard.swift in Sources */,
 				D68054D629202974008A36AC /* Petal_First_TestApp.swift in Sources */,
 				D6E2A174293D71E20001285E /* ToastView.swift in Sources */,
+				D65B506F297343A5004CAEA8 /* BackgroundView.swift in Sources */,
 				D68054FA2920CFFA008A36AC /* Shake.swift in Sources */,
 				D68054F1292079CB008A36AC /* WordleDataModel.swift in Sources */,
 				D68054E729202F54008A36AC /* Color+Extensions.swift in Sources */,
+				D6AD63DD296D2B18000F17D1 /* HelpView.swift in Sources */,
 				D68054F329207D14008A36AC /* Global.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		D615426729709EBA00875757 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D68054D129202974008A36AC /* Petal First Test */;
+			targetProxy = D615426629709EBA00875757 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		D615426929709EBA00875757 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5T2Q9777A6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Ardenn.Petal-First-TestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Petal First Test";
+			};
+			name = Debug;
+		};
+		D615426A29709EBA00875757 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5T2Q9777A6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Ardenn.Petal-First-TestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Petal First Test";
+			};
+			name = Release;
+		};
 		D68054DE29202976008A36AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -353,7 +489,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Petal First Test/Preview Content\"";
-				DEVELOPMENT_TEAM = 5T2Q9777A6;
+				DEVELOPMENT_TEAM = JBW7WPF3LH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -384,7 +520,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Petal First Test/Preview Content\"";
-				DEVELOPMENT_TEAM = 5T2Q9777A6;
+				DEVELOPMENT_TEAM = JBW7WPF3LH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -410,6 +546,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D615426829709EBA00875757 /* Build configuration list for PBXNativeTarget "Petal First TestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D615426929709EBA00875757 /* Debug */,
+				D615426A29709EBA00875757 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D68054CD29202974008A36AC /* Build configuration list for PBXProject "Petal First Test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
