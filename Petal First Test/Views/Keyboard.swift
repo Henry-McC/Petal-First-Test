@@ -36,8 +36,10 @@ struct Keyboard: View {
                 }
                 .font(.system(size: 20))
                 .frame(width: 60, height: 50)
-                .foregroundColor(.primary)
-                .background(Color.unused)
+                .foregroundColor(.black)
+                .background(.white)
+                .border(Color.black, width: 2)
+                .cornerRadius(4)
                 .disabled(dm.currentWord.count < 4 || !dm.inPlay)
                 .opacity((dm.currentWord.count < 4 || !dm.inPlay) ? 0.6 : 1)
                 ForEach(thirdRowArray, id: \.self) { letter in
@@ -47,12 +49,15 @@ struct Keyboard: View {
                 .opacity(dm.disabledKeys ? 0.6 : 1)
                 Button {
                     dm.removeLetterFromCurrentWord()
+                    dm.removeLetterFromTypedLetters()
                 } label: {
                     Image(systemName: "delete.backward.fill")
                         .font(.system(size: 20, weight: .heavy))
                         .frame(width: 40, height: 50)
-                        .foregroundColor(.primary)
-                        .background(Color.unused)
+                        .foregroundColor(.black)
+                        .background(.white)
+                        .border(Color.black, width: 2)
+                        .cornerRadius(5)
                     }
                 .disabled(!dm.inPlay || dm.currentWord.count == 0)
                 .opacity((!dm.inPlay || dm.currentWord.count == 0) ? 0.6 : 1)
@@ -65,10 +70,12 @@ struct Keyboard: View {
                 }
                 .font(.system(size: 20))
                 .frame(width: 150, height: 50)
-                .foregroundColor(.primary)
-                .background(Color.unused)
+                .foregroundColor(.black)
+                .background(.white)
                 .disabled(!dm.roundOver || dm.gameOver)
                 .opacity((!dm.roundOver || dm.gameOver) ? 0.6 : 1)
+                .border(Color.black, width: 2)
+                .cornerRadius(5)
                 }
             }
         }

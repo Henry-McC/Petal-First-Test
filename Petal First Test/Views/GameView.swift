@@ -10,7 +10,9 @@ import SwiftUI
 struct GameView: View {
     @EnvironmentObject var dm: WordleDataModel
     @State private var showHelp = false
+    @State private var showSettings = false
     var body: some View {
+        ZStack {
             NavigationView {
                 ZStack {
                     BackgroundView()
@@ -18,14 +20,15 @@ struct GameView: View {
                         VStack {
                             RoundView()
                             TimerView()
+                                .opacity(dm.shouldHide ? 1 : 0)
                             MultiplierView()
                             //      .hidden()
                                 .opacity(0)
                             //             Spacer()
                         }
                         .frame(alignment: .bottom)
-                        Text(dm.testWord)
-                            .font(.largeTitle)
+                        ShuffleView()
+                            .opacity(dm.shouldHide ? 1 : 0)
                         Button {
                             dm.startGame()
                         } label: {
@@ -76,29 +79,35 @@ struct GameView: View {
                                 .fontWeight(.heavy)
                         }
                         ToolbarItem(placement: .navigationBarTrailing) {
-                            /*      HStack {
-                             Button {
-                             
-                             } label: {
-                             Image(systemName: "chart.bar")
-                             }
-                             Button {
-                             
-                             } label: {
-                             Image(systemName: "gearshape.fill")
-                             }
-                             } */
+                            HStack {
+                                /*  Button {
+                                 
+                                 } label: {
+                                 Image(systemName: "chart.bar")
+                                 }*/
+                                Button {
+                                    showSettings.toggle()
+                                } label: {
+                                    Image(systemName: "gearshape.fill")
+                                }
+                                .foregroundColor(.black)
+                            }
                         }
- 
+                        
                     }
-
                 }
-                
+                }
+                if dm.showStats {
+                    StatsView()
+                }
             }
             .frame(height: UIScreen.main.bounds.size.height)
             .navigationViewStyle(.stack)
             .sheet(isPresented: $showHelp) {
                 HelpView()
+            }
+            .sheet(isPresented: $showSettings) {
+                SettingsView()
             }
         }
     }

@@ -11,8 +11,16 @@ struct RoundView: View {
     @EnvironmentObject var dm: WordleDataModel
 
     var body: some View {
-        Text(dm.roundText())
-        Text("Score: \(dm.userScore) High Score: \(dm.highScore)")
+        if dm.showRound == true {
+            Text(dm.roundText())
+                .font(.title2)
+            Text("Score: \(dm.userScore)")
+                .font(.title2)
+        } else {
+            Text("High Score: \(dm.highScore)")
+                .font(.title)
+        }
+        
     }
 }
 

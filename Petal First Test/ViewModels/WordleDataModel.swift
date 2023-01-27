@@ -20,6 +20,11 @@ class WordleDataModel: ObservableObject {
     @Published var shouldHide = false
     @Published var userScore = 0
     @Published var highScore = 0
+    @Published var typedLetters: [Character] = []
+    @Published var tapped = 0
+    @Published var showStats = false
+    @Published var showRound = false
+    let delaySeconds = 0.2
     
   //  @State var countDownTimer: Int = 5
   //  @State var timerRunning = true
@@ -48,6 +53,7 @@ class WordleDataModel: ObservableObject {
     func outOfTime() {
         gameOver = true
         inPlay = false
+        showRound = false
         showToast(with: "Out of Time!")
         shouldHide = false
     }
@@ -72,7 +78,7 @@ class WordleDataModel: ObservableObject {
     var inPlay = false
     var gameOver = false
     var toastWords = ["Awesome!", "Sweet!", "Nice!"]
-    var shuffledWord: Array<Character> = []
+    var shuffledWord: Array<Character> = [" "]
     var testWord = " "
     var round = 1
     var roundOver = false
@@ -117,12 +123,14 @@ class WordleDataModel: ObservableObject {
         startTimer()
         newGame()
         shuffle()
+        showRound = true
         shouldHide = true
     }
     
     // Set Up
     func newGame() {
         populateDefaults()
+        typedLetters = []
         if round < 3 {
             selectedWord = Global.commonWords.randomElement()!
         } else if round == 3 || round == 4 {
@@ -132,6 +140,7 @@ class WordleDataModel: ObservableObject {
         }
         currentWord = ""
         shuffledWord = selectedWord.shuffled()
+        roundOver = false
         inPlay = true
         tryIndex = 0
         gameOver = false
@@ -144,19 +153,9 @@ class WordleDataModel: ObservableObject {
     }
     
     func nextRound() {
-        if round == 5 {
-            gameOver = true
-            userScore = Int(Double(userScore) * multiplier)
-            if highScore < userScore {
-                highScore = userScore
-                defaults.set(userScore, forKey: "HighScore")
-            }
-            print("game over")
-            showToast(with: "Game Over!")
-            shouldHide = false
-        } else {
             round += 1
             roundOver = false
+            typedLetters = []
             maxGuess()
             newGame()
             shuffle()
@@ -164,7 +163,7 @@ class WordleDataModel: ObservableObject {
             startTimer()
            // roundText()
             print(round)
-        }
+        
     }
     
 
@@ -200,18 +199,38 @@ class WordleDataModel: ObservableObject {
         updateRow()
     }
     
+    func addToTypedLetters(_ letter: Character) {
+        typedLetters.append(letter)
+        print(typedLetters)
+    }
     
     
     func enterWord() {
         if verifyWord() && verifyLetters() {
+            userScore = (userScore + currentWord.count * 100)
+            if round == 5 {
+                roundOver = true
+                gameOver = true
+                userScore = Int(Double(userScore) * multiplier)
+                if highScore < userScore {
+                    highScore = userScore
+                    defaults.set(userScore, forKey: "HighScore")
+                }
+                showStats.toggle()
+                shuffledWord = [" "]
+                showToast(with: "Game Over!")
+                shouldHide = false
+                showRound = false
+            }
             endTimer()
-            print("Valid word")
             print(verifyLetters())
            // gameOver = true
-            print("You Win")
             roundOver = true
-            userScore = (userScore + currentWord.count * 100)
-            print("wtf")
+            
+            tapped += 1
+            DispatchQueue.main.asyncAfter(deadline: .now() + self.delaySeconds) {
+                self.tapped = 0
+            }
             inPlay = false
             showToast(with: toastWords.randomElement())
         }  else {
@@ -228,6 +247,11 @@ class WordleDataModel: ObservableObject {
         currentWord.removeLast()
         updateRow()
     }
+    
+    func removeLetterFromTypedLetters() {
+        typedLetters.removeLast()
+    }
+
     
     func updateRow() {
         let guessWord = currentWord.padding(toLength: 8, withPad: " ", startingAt: 0)

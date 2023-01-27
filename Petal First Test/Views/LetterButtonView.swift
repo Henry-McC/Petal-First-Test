@@ -13,12 +13,15 @@ struct LetterButtonView: View {
     var body: some View {
         Button {
             dm.addToCurrentWord(letter)
+            dm.addToTypedLetters(Character(letter))
         } label: {
             Text(letter)
                 .font(.system(size: 20))
                 .frame(width: 35,height: 50)
-                .background(dm.keyColors[letter])
-                .foregroundColor(.primary)
+                .background(.white)
+                .foregroundColor(.black)
+                .border(Color.black, width: 2)
+                .cornerRadius(4)
         }
         .buttonStyle(.plain)
     }

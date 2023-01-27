@@ -15,15 +15,16 @@ struct GuessView: View {
         HStack(spacing: 3) {
             ForEach(0...dm.boardLength, id: \.self) { index in
                 Text(guess.guessLetters[index])
-                    .foregroundColor(.primary)
+                    .foregroundColor(dm.roundOver ? .green : .black)
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 50, alignment: .center)
                    // .background(Color.systemBackground)
                     .font(.system(size: 35, weight: .heavy))
-                    //.border(Color(.secondaryLabel))
+                    .scaleEffect(dm.tapped > 0 ? 1.5 : 1)
+                    .animation(Animation.easeOut.repeatCount(1, autoreverses: true), value: dm.tapped)
                     .overlay(
                         Rectangle()
                             .frame(height: 3)
-                            .foregroundColor(.pink),
+                            .foregroundColor(.black),
                         alignment: .bottom
                 )
                     
