@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import GoogleMobileAds
 
 struct StatsView: View {
     @EnvironmentObject var dm: WordleDataModel
@@ -40,13 +41,13 @@ struct StatsView: View {
                 Text("Your Words:")
                
                     .fontWeight(.bold)
-                Text("House, Rowing")
-                Text("Archive, Rise")
-                Text("Creation")
+                Text("\(dm.statsWords[0]), \(dm.statsWords[1])")
+                Text("\(dm.statsWords[2]), \(dm.statsWords[3])")
+                Text("\(dm.statsWords[4])")
                 Spacer()
                 Text("Total Time:")
                     .fontWeight(.bold)
-                Text("\(dm.countDownTimer)")
+                Text("\(55 - dm.countDownTimer) Seconds")
             }
             Spacer()
         }

@@ -6,11 +6,16 @@
 //
 
 import SwiftUI
+import GoogleMobileAds
 
 
 
 class WordleDataModel: ObservableObject {
     let defaults = UserDefaults.standard
+    let adsVM = AdsViewModel.shared
+   // @EnvironmentObject var adsVM: AdsViewModel
+
+ 
     
     
     @Published var guesses: [Guess] = []
@@ -24,6 +29,8 @@ class WordleDataModel: ObservableObject {
     @Published var tapped = 0
     @Published var showStats = false
     @Published var showRound = false
+    @Published var statsWords: Array<String> = []
+    var addCount = 0
     let delaySeconds = 0.2
     
   //  @State var countDownTimer: Int = 5
@@ -31,7 +38,7 @@ class WordleDataModel: ObservableObject {
   //  let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
  /// Timer Data
-   @Published var countDownTimer: Int = 10
+   @Published var countDownTimer: Int = 15
    @Published var timerRunning = false
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
@@ -82,6 +89,7 @@ class WordleDataModel: ObservableObject {
     var testWord = " "
     var round = 1
     var roundOver = false
+    
    // var gNumber: Int = 6
    // var gArray = [0, 1, 2, 3, 4, 5]
 
@@ -109,15 +117,17 @@ class WordleDataModel: ObservableObject {
     init() {
        // newGame()
        // shuffle()
+       
         populateDefaults()
         inPlay = false
         highScore = defaults.integer(forKey: "HighScore")
     }
     
     func startGame() {
+        statsWords = []
         round = 1
         userScore = 0
-        countDownTimer = 10
+        countDownTimer = 15
         multiplier = 2.000
         maxGuess()
         startTimer()
@@ -205,16 +215,33 @@ class WordleDataModel: ObservableObject {
     }
     
     
+    
+    
     func enterWord() {
-        if verifyWord() && verifyLetters() {
+        if currentWord == "RAPE" || currentWord == "RAPED" || currentWord == "RAPIST" {
+            withAnimation {
+                self.incorrectAttempts[tryIndex] += 1
+            }
+            showToast(with: "Not in word list.")
+            incorrectAttempts[tryIndex] = 0
+        } else if verifyWord() && verifyLetters() {
+            statsWords.append(currentWord)
             userScore = (userScore + currentWord.count * 100)
+            print(statsWords)
             if round == 5 {
+                adsVM.showInterstitial = true
+                addCount += 1
                 roundOver = true
                 gameOver = true
                 userScore = Int(Double(userScore) * multiplier)
                 if highScore < userScore {
                     highScore = userScore
                     defaults.set(userScore, forKey: "HighScore")
+                    if addCount == 2 {
+    
+                        
+                        addCount = 0
+                    }
                 }
                 showStats.toggle()
                 shuffledWord = [" "]
@@ -226,7 +253,6 @@ class WordleDataModel: ObservableObject {
             print(verifyLetters())
            // gameOver = true
             roundOver = true
-            
             tapped += 1
             DispatchQueue.main.asyncAfter(deadline: .now() + self.delaySeconds) {
                 self.tapped = 0

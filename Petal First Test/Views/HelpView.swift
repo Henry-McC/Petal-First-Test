@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Page: View {
-    @Environment(\.dismiss) var dismiss
+  //  @Environment(\.dismiss) var dismiss
     let title: String
     let image: String
     let bodyOne: String

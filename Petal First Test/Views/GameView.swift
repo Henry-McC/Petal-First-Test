@@ -6,13 +6,17 @@
 //
 
 import SwiftUI
+import GoogleMobileAds
 
 struct GameView: View {
     @EnvironmentObject var dm: WordleDataModel
+    @EnvironmentObject var adsVM: AdsViewModel
     @State private var showHelp = false
     @State private var showSettings = false
     var body: some View {
+        
         ZStack {
+            
             NavigationView {
                 ZStack {
                     BackgroundView()
@@ -30,6 +34,7 @@ struct GameView: View {
                         ShuffleView()
                             .opacity(dm.shouldHide ? 1 : 0)
                         Button {
+                            //adsVM.showInterstitial.toggle()
                             dm.startGame()
                         } label: {
                             Text("Start!")
@@ -85,12 +90,12 @@ struct GameView: View {
                                  } label: {
                                  Image(systemName: "chart.bar")
                                  }*/
-                                Button {
+                               /* Button {
                                     showSettings.toggle()
                                 } label: {
                                     Image(systemName: "gearshape.fill")
                                 }
-                                .foregroundColor(.black)
+                                .foregroundColor(.black) */
                             }
                         }
                         
@@ -106,9 +111,9 @@ struct GameView: View {
             .sheet(isPresented: $showHelp) {
                 HelpView()
             }
-            .sheet(isPresented: $showSettings) {
+           /* .sheet(isPresented: $showSettings) {
                 SettingsView()
-            }
+            } */
         }
     }
 
@@ -118,5 +123,6 @@ struct GameView_Previews: PreviewProvider {
     static var previews: some View {
         GameView()
             .environmentObject(WordleDataModel())
+            .environmentObject(AdsViewModel())
     }
 }
