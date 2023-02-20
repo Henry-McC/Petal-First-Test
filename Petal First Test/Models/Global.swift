@@ -30,6 +30,19 @@ enum Global {
         }
     }
     
+    static var boardHeight: CGFloat {
+        switch minDimension {
+        case 0...320:
+            return screenWidth - 55
+        case 321...420:
+            return screenWidth - 50
+        case 431...1000:
+            return 350
+        default:
+            return 725
+        }
+    }
+    
     static var keyboardScale: CGFloat {
         switch minDimension {
         case 0...430:

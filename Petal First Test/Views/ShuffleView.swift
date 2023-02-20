@@ -47,6 +47,18 @@ struct ShuffleView: View {
                     .foregroundColor(dLetter.color)
             }
         }
+        Button {
+            dm.shuffledWord.shuffle()
+        } label: {
+            Text("Shuffle")
+        }
+        .padding(5)
+        .padding([.trailing, .leading], 10)
+        .foregroundColor(.white)
+        .background(.purple)
+        .cornerRadius(15)
+        .opacity(dm.shouldHide ? 1 : 0)
+        Spacer()
     }
 }
 

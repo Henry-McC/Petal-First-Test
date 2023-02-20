@@ -1,14 +1,13 @@
 //
-//  StatsView.swift
+//  OutOfTimeView.swift
 //  Petal First Test
 //
-//  Created by Henry A. McCreight on 1/25/23.
+//  Created by Henry A. McCreight on 2/12/23.
 //
 
 import SwiftUI
-import GoogleMobileAds
 
-struct StatsView: View {
+struct OutOfTimeView: View {
     @EnvironmentObject var dm: WordleDataModel
     var body: some View {
         VStack(spacing: 10) {
@@ -16,19 +15,21 @@ struct StatsView: View {
                 Spacer()
                 Button {
                     withAnimation {
-                        dm.showStats.toggle()
+                        dm.showOutOfTime.toggle()
+                        dm.shouldHide = false
+                        dm.showRound = false
                     }
                 } label: {
                     Text("Close")
                 }
                 .offset(x: 10, y: 20)
             }
-            Text("NICE ONE!")
-                .font(.headline)
+            Text("So Close!")
+                .font(.title2)
                 .fontWeight(.bold)
             VStack(spacing: 10) {
                 HStack {
-                    Text("You Scored:")
+                    Text("Score:")
                     Text("\(dm.userScore)")
                         .font(.title)
                 }
@@ -38,16 +39,14 @@ struct StatsView: View {
                         .font(.title)
                 }
                 Spacer()
-                Text("Your Words:")
+                Text("You Lost on Round \(dm.round)")
                
                     .fontWeight(.bold)
-                Text("\(dm.statsWords[0]), \(dm.statsWords[1])")
-                Text("\(dm.statsWords[2]), \(dm.statsWords[3])")
-                Text("\(dm.statsWords[4])")
+                Text("The Word Was:")
+                Text("\(dm.selectedWord)")
+                    .font(.title)
                 Spacer()
-                Text("Total Time:")
-                    .fontWeight(.bold)
-                Text("\(80 - dm.countDownTimer) Seconds")
+                Text("You'll get it next time!")
             }
             Spacer()
         }
@@ -59,10 +58,9 @@ struct StatsView: View {
         .shadow(color: .black.opacity(0.3), radius: 10)
     }
 }
-
-struct StatsView_Previews: PreviewProvider {
+struct OutOfTimeView_Previews: PreviewProvider {
     static var previews: some View {
-        StatsView()
+        OutOfTimeView()
             .environmentObject(WordleDataModel())
     }
 }

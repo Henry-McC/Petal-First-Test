@@ -28,6 +28,7 @@ class WordleDataModel: ObservableObject {
     @Published var typedLetters: [Character] = []
     @Published var tapped = 0
     @Published var showStats = false
+    @Published var showOutOfTime = false
     @Published var showRound = false
     @Published var statsWords: Array<String> = []
     var addCount = 0
@@ -38,7 +39,7 @@ class WordleDataModel: ObservableObject {
   //  let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
  /// Timer Data
-   @Published var countDownTimer: Int = 15
+   @Published var countDownTimer: Int = 20
    @Published var timerRunning = false
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
@@ -54,23 +55,30 @@ class WordleDataModel: ObservableObject {
     }
     
     func addTime() {
-        countDownTimer = countDownTimer + 10
+        countDownTimer = countDownTimer + 15
     }
     
     func outOfTime() {
+        //shuffledWord = Array(selectedWord)
+        showOutOfTime.toggle()
+        addCount += 1
+        if addCount == 2 {
+            adsVM.showInterstitial = true
+            addCount = 0
+        }
         gameOver = true
         inPlay = false
-        showRound = false
+       // showRound = false
         showToast(with: "Out of Time!")
-        shouldHide = false
+    //    shouldHide = false
     }
  ///
     
 /// Multiplier Countdown
     
     @Published var multiplier: Double = 2.000
-    @Published var multiplierRunning = false
-    let multiplierTimer = Timer.publish(every: 0.052, on: .main, in: .common).autoconnect()
+    @Published var multiplierRunning = true
+    let multiplierTimer = Timer.publish(every: 0.082, on: .main, in: .common).autoconnect()
 
     
     @objc func startMultiplier() {
@@ -127,7 +135,7 @@ class WordleDataModel: ObservableObject {
         statsWords = []
         round = 1
         userScore = 0
-        countDownTimer = 15
+        countDownTimer = 20
         multiplier = 2.000
         maxGuess()
         startTimer()
@@ -229,19 +237,18 @@ class WordleDataModel: ObservableObject {
             userScore = (userScore + currentWord.count * 100)
             print(statsWords)
             if round == 5 {
-                adsVM.showInterstitial = true
                 addCount += 1
+                if addCount == 2 {
+                    adsVM.showInterstitial = true
+                    addCount = 0
+                }
                 roundOver = true
                 gameOver = true
                 userScore = Int(Double(userScore) * multiplier)
                 if highScore < userScore {
                     highScore = userScore
                     defaults.set(userScore, forKey: "HighScore")
-                    if addCount == 2 {
-    
-                        
-                        addCount = 0
-                    }
+
                 }
                 showStats.toggle()
                 shuffledWord = [" "]

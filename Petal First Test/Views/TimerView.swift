@@ -25,7 +25,7 @@ struct TimerView: View {
                         dm.timerRunning = false
                     }
                 }
-                .opacity(dm.gameOver ? 0 : 1)
+                .opacity(dm.shouldHide ? 1 : 0)
          //       .frame(height: dm.gameOver ? nil : 0)
         }
         .font(.system(size: 30))

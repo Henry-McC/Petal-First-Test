@@ -11,12 +11,10 @@ import GoogleMobileAds
 struct GameView: View {
     @EnvironmentObject var dm: WordleDataModel
     @EnvironmentObject var adsVM: AdsViewModel
-    @State private var showHelp = false
+    @State private var showHelp = true
     @State private var showSettings = false
     var body: some View {
-        
         ZStack {
-            
             NavigationView {
                 ZStack {
                     BackgroundView()
@@ -45,14 +43,15 @@ struct GameView: View {
                         .background(.purple)
                         .cornerRadius(5)
                         .opacity(dm.shouldHide ? 0 : 1)
+
                         // .frame(maxHeight:  UIScreen.main.bounds.size.height - 620)
                         //  .frame(height: dm.shouldHide ? nil : 0)
                         VStack(spacing: 3) {
                             GuessView(guess: $dm.guesses[0])
                                 .modifier(Shake(animatableData: CGFloat(dm.incorrectAttempts[0])))
                         }
-                        .padding([.top], 30)
-                        .frame(width: Global.boardWidth, height: 3.8 * Global.boardWidth / 8)
+                        .padding([.top], 35)
+                        .frame(width: Global.boardWidth, height: 2.5 * Global.boardHeight / 8)
                         //         Spacer()
                         Keyboard()
                             .scaleEffect(Global.keyboardScale)
@@ -105,6 +104,9 @@ struct GameView: View {
                 if dm.showStats {
                     StatsView()
                 }
+            if dm.showOutOfTime {
+                OutOfTimeView()
+            }
             }
             .frame(height: UIScreen.main.bounds.size.height)
             .navigationViewStyle(.stack)

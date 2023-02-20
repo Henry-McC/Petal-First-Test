@@ -31,6 +31,7 @@
 		D68054F7292086D3008A36AC /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68054F6292086D3008A36AC /* Keyboard.swift */; };
 		D68054FA2920CFFA008A36AC /* Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68054F92920CFFA008A36AC /* Shake.swift */; };
 		D68C4FAF298472A80015128D /* InterstitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C4FAE298472A80015128D /* InterstitialView.swift */; };
+		D68DE4EB299958BE00AE225E /* OutOfTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68DE4EA299958BE00AE225E /* OutOfTimeView.swift */; };
 		D6AD63DD296D2B18000F17D1 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AD63DC296D2B18000F17D1 /* HelpView.swift */; };
 		D6CC9D952969DD27006FA274 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC9D942969DD27006FA274 /* TimerView.swift */; };
 		D6E2A174293D71E20001285E /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E2A173293D71E20001285E /* ToastView.swift */; };
@@ -77,6 +78,7 @@
 		D68054F92920CFFA008A36AC /* Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shake.swift; sourceTree = "<group>"; };
 		D68C4F8A298397360015128D /* Petal-First-Test-Info.plist */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "Petal-First-Test-Info.plist"; sourceTree = SOURCE_ROOT; };
 		D68C4FAE298472A80015128D /* InterstitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialView.swift; sourceTree = "<group>"; };
+		D68DE4EA299958BE00AE225E /* OutOfTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutOfTimeView.swift; sourceTree = "<group>"; };
 		D6AD63DC296D2B18000F17D1 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 		D6CC9D942969DD27006FA274 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		D6E2A173293D71E20001285E /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				D6125BB5297C7B8B005081F1 /* ShuffleView.swift */,
 				D6AD63DC296D2B18000F17D1 /* HelpView.swift */,
 				D6125BB7297C80FF005081F1 /* SettingsView.swift */,
+				D68DE4EA299958BE00AE225E /* OutOfTimeView.swift */,
 				D61FB45C298191D900D3860B /* StatsView.swift */,
 			);
 			path = Views;
@@ -450,6 +453,7 @@
 				D6E2A174293D71E20001285E /* ToastView.swift in Sources */,
 				D68C4FAF298472A80015128D /* InterstitialView.swift in Sources */,
 				D65B506F297343A5004CAEA8 /* BackgroundView.swift in Sources */,
+				D68DE4EB299958BE00AE225E /* OutOfTimeView.swift in Sources */,
 				D68054FA2920CFFA008A36AC /* Shake.swift in Sources */,
 				D61FB45D298191D900D3860B /* StatsView.swift in Sources */,
 				D68054F1292079CB008A36AC /* WordleDataModel.swift in Sources */,
@@ -633,7 +637,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.13;
 				DEVELOPMENT_ASSET_PATHS = "\"Petal First Test/Preview Content\"";
 				DEVELOPMENT_TEAM = JBW7WPF3LH;
 				ENABLE_PREVIEWS = YES;
@@ -651,7 +655,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "Ardenn.Petal-First-Test";
 				PRODUCT_NAME = Petal;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -667,7 +671,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.13;
 				DEVELOPMENT_ASSET_PATHS = "\"Petal First Test/Preview Content\"";
 				DEVELOPMENT_TEAM = JBW7WPF3LH;
 				ENABLE_PREVIEWS = YES;
@@ -685,7 +689,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "Ardenn.Petal-First-Test";
 				PRODUCT_NAME = Petal;
 				SWIFT_EMIT_LOC_STRINGS = YES;

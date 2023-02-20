@@ -17,7 +17,7 @@ struct GuessView: View {
                 Text(guess.guessLetters[index])
                     .foregroundColor(dm.roundOver ? .green : .black)
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 50, alignment: .center)
-                   // .background(Color.systemBackground)
+               //     .background(Color.systemBackground)
                     .font(.system(size: 35, weight: .heavy))
                     .scaleEffect(dm.tapped > 0 ? 1.5 : 1)
                     .animation(Animation.easeOut.repeatCount(1, autoreverses: true), value: dm.tapped)

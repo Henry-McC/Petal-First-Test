@@ -69,6 +69,13 @@ struct HelpView: View {
                 bodyTwo: "Number of letters isn't all though. your final score is multiplied depending on how quickly you finished so balance word length with speed. Good Luck!",
                 color: Color(.purple)
             )
+            Page(
+                title: "FAQ",
+                image: "HelpFour",
+                bodyOne: "App not accepting any of the words you submit? Make sure you have a dictionary enabled on your phone!",
+                bodyTwo: "Open settings and go to: General > Dictionary > English (US) and that will solve it! If you have any other questions you can contact us on Instagram!",
+                color: Color(.systemPink)
+            )
         }
         .tabViewStyle(PageTabViewStyle())
     }

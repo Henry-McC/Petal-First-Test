@@ -14,7 +14,7 @@ import AdSupport
 class AdsManager: NSObject, ObservableObject {
     
     private struct AdMobConstant {
-        static let interstitial1ID = "ca-app-pub-3940256099942544/1033173712"
+        static let interstitial1ID = "ca-app-pub-8276880532600055/8960274847"
     }
     
     final class Interstitial: NSObject, GADFullScreenContentDelegate, ObservableObject {
