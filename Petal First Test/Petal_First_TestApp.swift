@@ -7,6 +7,7 @@
 
 import SwiftUI
 import GoogleMobileAds
+import UserNotifications
 
 @main
 struct Petal_First_TestApp: App {
@@ -20,6 +21,10 @@ struct Petal_First_TestApp: App {
             GameView()
                 .environmentObject(dm)
                 .environmentObject(adsVM)
+                .onAppear {
+                    NotificationManager.instance.requestAuthorization()
+                    NotificationManager.instance.scheduleDailyNotification(hour: 20, minute: 1)
+                }
         }
         
     }

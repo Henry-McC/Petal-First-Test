@@ -21,7 +21,7 @@ enum Global {
         switch minDimension {
         case 0...320:
             return screenWidth - 55
-        case 321...420:
+        case 321...430:
             return screenWidth - 50
         case 431...1000:
             return 350
@@ -34,7 +34,7 @@ enum Global {
         switch minDimension {
         case 0...320:
             return screenWidth - 55
-        case 321...420:
+        case 321...430:
             return screenWidth - 50
         case 431...1000:
             return 350
@@ -54,7 +54,9 @@ enum Global {
         }
     }
     
+    
     static let commonWords = ["ALCOVE", "ANSWER", "BEHIND", "BITTER", "BLAZER", "BORING", "BUILDS", "CARBON", "CATCHY", "EXPAND", "EXPECT", "EXPERT", "FALTER", "FLIGHT", "FORMAT", "GILDED", "GROUND", "JUMBLE", "LETTER", "NORMAL", "NUMBER", "OBJECT", "PROPER", "QUARRY", "QUIVER", "ROWING", "SEARCH", "SECOND", "SHOULD", "SPRING", "SPREAD", "STITCH", "STRIKE", "STREET", "SUBMIT", "TIMBER", "THINKS", "WITHIN", "WONDER", "WRITER", "BABBLE", "BADGER", "BAFFLE", "BUTLER", "BUTTON", "BUNKER", "BULLET", "GALLEY", "GALLON", "GUILTY", "GROVEL", "IGNITE", "IDIOTS", "INFECT", "LEGACY", "PUTTER", "PROVEN", "PRINCE", "WELDER", "UNEASY", "VERBAL", "VIKING", "TWENTY", "TYRANT", "TURKEY", "RARELY", "REALTY", "REVIVE", "QUARTZ", "QUORUM"]
+    
     
     static let commonWords2 = ["ADVANCE", "ANOTHER", "ARCHIVE", "ATHLETE", "BECAUSE", "COMPANY", "CONCEPT", "COVERED", "DELIVER", "DRIZZLE", "DYNAMIC", "ELEGANT", "EMERALD", "FEELING", "FREIGHT", "FURTHER", "HOLDING", "HEIRESS", "HYDRATE", "LUNATIC", "LYRICAL", "MACHINE", "NATURAL", "NEGLECT", "PARTNER", "PAYMENT", "PLATOON", "PRESENT", "PROTECT", "PROPOSE", "PURSUIT", "REALIST", "SCIENCE", "SERVICE", "STORAGE", "THEATER", "THERAPY", "TEDIOUS", "WATCHES", "WITHOUT", "CABBAGE", "CALIBER", "CASHIER", "CHAPTER", "DEAREST", "DECEIVE", "DECLINE", "ECHELON", "ELITISM", "EMBRACE", "EMPOWER", "FACULTY", "FAINTED", "FIGMENT", "HABITAT", "HIDEOUT", "HIGHWAY", "ICEBERG", "IMPEACH", "ISOLATE", "JEWELRY", "JOYRIDE", "KICKOFF", "KITCHEN", "MACHINE", "MANAGER", "MASSIVE", "PACIFIC", "SALVAGE", "SCHOLAR"]
     

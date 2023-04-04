@@ -7,12 +7,14 @@
 
 import SwiftUI
 import GoogleMobileAds
+import UserNotifications
 
 struct GameView: View {
     @EnvironmentObject var dm: WordleDataModel
     @EnvironmentObject var adsVM: AdsViewModel
     @State private var showHelp = true
     @State private var showSettings = false
+    @State private var showPause = false
     var body: some View {
         ZStack {
             NavigationView {
@@ -89,12 +91,15 @@ struct GameView: View {
                                  } label: {
                                  Image(systemName: "chart.bar")
                                  }*/
-                               /* Button {
-                                    showSettings.toggle()
+                                Button {
+                                    dm.showPause.toggle()
+                                    dm.pauseGame()
+                                    dm.inPlay = false
                                 } label: {
-                                    Image(systemName: "gearshape.fill")
+                                    Image(systemName: "pause.fill")
                                 }
-                                .foregroundColor(.black) */
+                                .foregroundColor(.black)
+                                .disabled(!dm.inPlay)
                             }
                         }
                         
@@ -103,9 +108,13 @@ struct GameView: View {
                 }
                 if dm.showStats {
                     StatsView()
+                 //   ShareView()
                 }
             if dm.showOutOfTime {
                 OutOfTimeView()
+            }
+            if dm.showPause {
+                PauseView()
             }
             }
             .frame(height: UIScreen.main.bounds.size.height)
@@ -120,6 +129,44 @@ struct GameView: View {
     }
 
 
+
+
+class NotificationManager {
+    
+    static let instance = NotificationManager()
+    
+    private let center = UNUserNotificationCenter.current()
+    
+    func requestAuthorization() {
+        let options: UNAuthorizationOptions = [.alert, .sound]
+        center.requestAuthorization(options: options) { (success, error) in
+            if let error = error {
+                print("ERROR: \(error)")
+            } else {
+                print("SUCCESS")
+            }
+        }
+    }
+    
+    func scheduleDailyNotification(hour: Int, minute: Int) {
+        let content = UNMutableNotificationContent()
+        content.title = "Hey Hey!"
+        content.subtitle = "Did you play Petal today?"
+        content.sound = .default
+        
+        var dateComponents = DateComponents()
+        dateComponents.hour = hour
+        dateComponents.minute = minute
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        
+        let request = UNNotificationRequest(
+            identifier: UUID().uuidString,
+            content: content,
+            trigger: trigger)
+        center.add(request)
+    }
+    
+}
 
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {

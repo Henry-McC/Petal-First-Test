@@ -15,6 +15,7 @@
 		D615426329709EBA00875757 /* Petal_First_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D615426229709EBA00875757 /* Petal_First_TestUITests.swift */; };
 		D615426529709EBA00875757 /* Petal_First_TestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D615426429709EBA00875757 /* Petal_First_TestUITestsLaunchTests.swift */; };
 		D61FB45D298191D900D3860B /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61FB45C298191D900D3860B /* StatsView.swift */; };
+		D63E93F329CE8F8E00BA8764 /* PauseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E93F229CE8F8E00BA8764 /* PauseView.swift */; };
 		D65B506F297343A5004CAEA8 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65B506E297343A5004CAEA8 /* BackgroundView.swift */; };
 		D663D497296C80F00075DE01 /* MultiplierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D663D496296C80F00075DE01 /* MultiplierView.swift */; };
 		D68054D629202974008A36AC /* Petal_First_TestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68054D529202974008A36AC /* Petal_First_TestApp.swift */; };
@@ -60,6 +61,7 @@
 		D615426229709EBA00875757 /* Petal_First_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petal_First_TestUITests.swift; sourceTree = "<group>"; };
 		D615426429709EBA00875757 /* Petal_First_TestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petal_First_TestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D61FB45C298191D900D3860B /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		D63E93F229CE8F8E00BA8764 /* PauseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseView.swift; sourceTree = "<group>"; };
 		D65B506E297343A5004CAEA8 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		D663D496296C80F00075DE01 /* MultiplierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplierView.swift; sourceTree = "<group>"; };
 		D68054D229202974008A36AC /* Petal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Petal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,6 +216,7 @@
 				D6AD63DC296D2B18000F17D1 /* HelpView.swift */,
 				D6125BB7297C80FF005081F1 /* SettingsView.swift */,
 				D68DE4EA299958BE00AE225E /* OutOfTimeView.swift */,
+				D63E93F229CE8F8E00BA8764 /* PauseView.swift */,
 				D61FB45C298191D900D3860B /* StatsView.swift */,
 			);
 			path = Views;
@@ -448,6 +451,7 @@
 				D68054EB2920305D008A36AC /* Guess.swift in Sources */,
 				D6CC9D952969DD27006FA274 /* TimerView.swift in Sources */,
 				D68054F7292086D3008A36AC /* Keyboard.swift in Sources */,
+				D63E93F329CE8F8E00BA8764 /* PauseView.swift in Sources */,
 				D6125BB6297C7B8B005081F1 /* ShuffleView.swift in Sources */,
 				D68054D629202974008A36AC /* Petal_First_TestApp.swift in Sources */,
 				D6E2A174293D71E20001285E /* ToastView.swift in Sources */,
@@ -637,7 +641,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.13;
+				CURRENT_PROJECT_VERSION = 1.15;
 				DEVELOPMENT_ASSET_PATHS = "\"Petal First Test/Preview Content\"";
 				DEVELOPMENT_TEAM = JBW7WPF3LH;
 				ENABLE_PREVIEWS = YES;
@@ -655,7 +659,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.13;
+				MARKETING_VERSION = 1.15;
 				PRODUCT_BUNDLE_IDENTIFIER = "Ardenn.Petal-First-Test";
 				PRODUCT_NAME = Petal;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -671,7 +675,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.13;
+				CURRENT_PROJECT_VERSION = 1.15;
 				DEVELOPMENT_ASSET_PATHS = "\"Petal First Test/Preview Content\"";
 				DEVELOPMENT_TEAM = JBW7WPF3LH;
 				ENABLE_PREVIEWS = YES;
@@ -689,7 +693,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.13;
+				MARKETING_VERSION = 1.15;
 				PRODUCT_BUNDLE_IDENTIFIER = "Ardenn.Petal-First-Test";
 				PRODUCT_NAME = Petal;
 				SWIFT_EMIT_LOC_STRINGS = YES;

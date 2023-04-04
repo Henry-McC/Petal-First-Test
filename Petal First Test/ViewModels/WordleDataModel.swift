@@ -28,6 +28,7 @@ class WordleDataModel: ObservableObject {
     @Published var typedLetters: [Character] = []
     @Published var tapped = 0
     @Published var showStats = false
+    @Published var showPause = false
     @Published var showOutOfTime = false
     @Published var showRound = false
     @Published var statsWords: Array<String> = []
@@ -319,5 +320,15 @@ class WordleDataModel: ObservableObject {
         withAnimation(Animation.linear(duration: 0.2).delay(1)) {
             toastText = nil
         }
+    }
+    
+    func pauseGame() {
+        if showPause {
+            endTimer()
+        }
+    }
+    
+    func resumeGame() {
+        startTimer()
     }
 }
