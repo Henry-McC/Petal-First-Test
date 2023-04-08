@@ -249,7 +249,6 @@ class WordleDataModel: ObservableObject {
                 if highScore < userScore {
                     highScore = userScore
                     defaults.set(userScore, forKey: "HighScore")
-
                 }
                 showStats.toggle()
                 shuffledWord = [" "]
@@ -266,6 +265,7 @@ class WordleDataModel: ObservableObject {
                 self.tapped = 0
             }
             inPlay = false
+            shuffledWord = Array(selectedWord)
             showToast(with: toastWords.randomElement())
         }  else {
                 withAnimation {

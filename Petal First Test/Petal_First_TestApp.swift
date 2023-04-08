@@ -23,7 +23,7 @@ struct Petal_First_TestApp: App {
                 .environmentObject(adsVM)
                 .onAppear {
                     NotificationManager.instance.requestAuthorization()
-                    NotificationManager.instance.scheduleDailyNotification(hour: 20, minute: 1)
+                    NotificationManager.instance.scheduleDailyNotification(hour: 10, minute: 14)
                 }
         }
         
